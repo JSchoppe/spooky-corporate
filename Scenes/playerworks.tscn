@@ -1,11 +1,11 @@
-[gd_scene load_steps=93 format=3 uid="uid://b411u13bricjf"]
+[gd_scene load_steps=94 format=3 uid="uid://b411u13bricjf"]
 
 [ext_resource type="Script" path="res://Scenes/playerworks.gd" id="1_sl1oe"]
 [ext_resource type="AudioStream" uid="uid://dgo6rqd6vpqd3" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-001.ogg" id="2_x62f0"]
 [ext_resource type="AudioStream" uid="uid://dxfrg6fec7kjd" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-002.ogg" id="3_bpv43"]
 [ext_resource type="Texture2D" uid="uid://ke2qhwmrud2t" path="res://Art/speechbubble1.png" id="3_hghet"]
 [ext_resource type="Texture2D" uid="uid://dd4d8h5x2sv73" path="res://Art/character.png" id="3_nlbw0"]
-[ext_resource type="Texture2D" uid="uid://crjweobw4qja5" path="res://Art/phone_background.png" id="4_0piav"]
+[ext_resource type="Texture2D" uid="uid://bvbujdya6mqqn" path="res://Art/phone_background.png" id="4_0piav"]
 [ext_resource type="AudioStream" uid="uid://p6mfdqpvga74" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-003.ogg" id="4_m04kb"]
 [ext_resource type="AudioStream" uid="uid://b36scmmjexkrp" path="res://Audio/SFX/you_died.ogg" id="5_2japx"]
 [ext_resource type="AudioStream" uid="uid://be0cxe38t7j6h" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-004.ogg" id="5_u1bhp"]
@@ -19,11 +19,12 @@
 [ext_resource type="AudioStream" uid="uid://c8tksm8ydvtos" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-008.ogg" id="9_cbdo6"]
 [ext_resource type="AudioStream" uid="uid://bf4nuuf6or4mf" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-009.ogg" id="10_jfrg0"]
 [ext_resource type="AudioStream" uid="uid://cb8ii8qqb8k7n" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-010.ogg" id="11_xv30d"]
-[ext_resource type="Texture2D" uid="uid://b2g3jgrg33wur" path="res://Art/Document.png" id="20_0m5ys"]
-[ext_resource type="Texture2D" uid="uid://daiugvk04tjhq" path="res://Art/Document2.png" id="21_o602q"]
+[ext_resource type="Texture2D" uid="uid://c7l820xtnmptk" path="res://Art/Document.png" id="20_0m5ys"]
+[ext_resource type="Texture2D" uid="uid://ypdtwek8i1b2" path="res://Art/Document2.png" id="21_o602q"]
 [ext_resource type="AudioStream" uid="uid://2s116gmtdm7q" path="res://Audio/SFX/Lightning.ogg" id="22_fq8vt"]
 [ext_resource type="AudioStream" uid="uid://dtinvd7i3y1xr" path="res://Audio/SFX/success.ogg" id="23_hj2a1"]
-[ext_resource type="Texture2D" uid="uid://ckdx7stkfyn5n" path="res://Art/EndScreen.png" id="24_wms1g"]
+[ext_resource type="Texture2D" uid="uid://cd2ld7yvdcq66" path="res://Art/EndScreen.png" id="24_wms1g"]
+[ext_resource type="AudioStream" uid="uid://j0sufpwt6h2h" path="res://Audio/SFX/CandyCornMunch.ogg" id="25_dx0jd"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_uj7vh"]
 playback_mode = 1
@@ -654,6 +655,9 @@ offset_bottom = 203.0
 text = "0"
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
+
+[node name="CandySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_dx0jd")
 
 [connection signal="area_entered" from="Interaction Area" to="." method="_on_area_entered"]
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

@@ -131,7 +131,7 @@ func _unpause():
 # Called when an area is entered by the player shape.
 func _on_area_entered(area: Area2D) -> void:
 	if area is iCorn and area.is_visible():
-		$Pickup.play()
+		$CandySound.play()
 		area.hide()
 		Gvars.iCorn = Gvars.iCorn + 1
 		#candy_hit.emit()

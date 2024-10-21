@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://47iv2jh5n8rk"]
+[gd_scene load_steps=12 format=3 uid="uid://47iv2jh5n8rk"]
 
 [ext_resource type="Script" path="res://Scenes/copy_monster.gd" id="1_g0unm"]
 [ext_resource type="Texture2D" uid="uid://c1h26g3735x1n" path="res://Art/ghost.png" id="2_iaxnw"]
 [ext_resource type="Script" path="res://Scenes/copy_monster_hurt_zone.gd" id="3_e27o5"]
 [ext_resource type="Script" path="res://Scenes/animated_sprite_2d.gd" id="3_tkect"]
+[ext_resource type="AudioStream" uid="uid://b3iexvk4p3tme" path="res://Audio/SFX/Enemies/Copy Monster/HauntedCopyMachineIdle_Loop.ogg" id="5_735xk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cu7c"]
 size = Vector2(128, 128)
@@ -58,5 +59,8 @@ script = ExtResource("3_e27o5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CopyMonsterHurtZone"]
 shape = SubResource("RectangleShape2D_qmcq3")
+
+[node name="copysound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_735xk")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

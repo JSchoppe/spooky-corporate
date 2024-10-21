@@ -24,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
+		#$copysound.play()
 		#$AnimatedSprite2D.animation = "walk"
 		#$AnimatedSprite2D.flip_h = velocity.x > 0
 	#else:

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://drnywv2arvv80"]
+
+[ext_resource type="Script" path="res://Scenes/complaints_rug.gd" id="1_7jtdg"]
+[ext_resource type="Texture2D" uid="uid://kdru5dcmjs7q" path="res://Art/ComplaintsRug.png" id="1_wp3i4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5n47q"]
+size = Vector2(71, 183)
+
+[node name="ComplaintsRug" type="Area2D"]
+script = ExtResource("1_7jtdg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_5n47q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wp3i4")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

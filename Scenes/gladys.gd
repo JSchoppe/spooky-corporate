@@ -10,4 +10,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$AnimatedSprite2D.play()
+	#print($AnimatedSprite2D.at_position)
 	pass

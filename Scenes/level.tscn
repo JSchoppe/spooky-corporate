@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://jlehwaifg3n3"]
+[gd_scene load_steps=68 format=3 uid="uid://jlehwaifg3n3"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_jk4ih"]
 [ext_resource type="Texture2D" uid="uid://buss7malm43ok" path="res://Art/floor_1_background.png" id="1_lqlnj"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cwx2ubufmkjdp" path="res://Scenes/document_item.tscn" id="18_kl7hh"]
 [ext_resource type="PackedScene" uid="uid://dunhudykqn40i" path="res://Scenes/cactus_1.tscn" id="20_uun8i"]
 [ext_resource type="Script" path="res://Scenes/elevator_trigger.gd" id="21_s58cr"]
+[ext_resource type="PackedScene" uid="uid://drnywv2arvv80" path="res://Scenes/complaints_rug.tscn" id="22_286p1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6y7wf"]
 size = Vector2(2600, 200)
@@ -129,16 +130,16 @@ size = Vector2(155.75, 3448.75)
 size = Vector2(2444.25, 191.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02epr"]
-size = Vector2(522, 557)
+size = Vector2(569, 1143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utw74"]
-size = Vector2(512, 512)
+size = Vector2(547, 1166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4rr27"]
-size = Vector2(500, 500)
+size = Vector2(576, 1090)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmc37"]
-size = Vector2(512, 512)
+size = Vector2(570, 989)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2jp6"]
 size = Vector2(3060.5, 252)
@@ -342,19 +343,19 @@ position = Vector2(38, 4424)
 shape = SubResource("RectangleShape2D_dalmw")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="ComplaintsWalls"]
-position = Vector2(-499, 2445)
+position = Vector2(-599.5, 1819.5)
 shape = SubResource("RectangleShape2D_02epr")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="ComplaintsWalls"]
-position = Vector2(429, 2441)
+position = Vector2(423.5, 1803)
 shape = SubResource("RectangleShape2D_utw74")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="ComplaintsWalls"]
-position = Vector2(-522, 3550)
+position = Vector2(-592, 3867)
 shape = SubResource("RectangleShape2D_4rr27")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="ComplaintsWalls"]
-position = Vector2(429, 3590)
+position = Vector2(390, 3807.5)
 shape = SubResource("RectangleShape2D_rmc37")
 
 [node name="HRBackground" type="Sprite2D" parent="."]
@@ -563,3 +564,6 @@ script = ExtResource("21_s58cr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ElevatorTrigger"]
 position = Vector2(3407.5, -317)
 shape = SubResource("RectangleShape2D_5q1gl")
+
+[node name="ComplaintsRug" parent="." instance=ExtResource("22_286p1")]
+position = Vector2(1370, 3613)

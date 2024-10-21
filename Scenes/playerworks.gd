@@ -74,6 +74,7 @@ func _physics_process(delta: float) -> void:
 				position.x = spawnx
 				position.y = spawny
 				$AnimatedSprite2D.animation = "idle"
+				$CollisionShape2D.set_deferred("disabled", false)
 				pass#respawn here
 		else:
 			var velocity = Vector2.ZERO # The player's movement vector.
@@ -168,6 +169,10 @@ func _on_area_entered(area: Area2D) -> void:
 			Gvars.CurrentMessage = "The elevators are turned off for the night"
 			Gvars.MessageTime = Gvars.time
 func _start_death_sequence():
+	
+	# disable collision's while the player is dead
+	$CollisionShape2D.set_deferred("disabled", true)
+	
 	$AnimatedSprite2D.animation = "dying"
 	dying = true
 	deadtime = Gvars.time
@@ -179,4 +184,3 @@ func _start_death_sequence():
 func _on_animated_sprite_2d_animation_looped():
 	if dying:
 		$AnimatedSprite2D.animation = "dead"	
-		pass

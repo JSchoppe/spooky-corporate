@@ -16,9 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://cicmgpricdd81" path="res://Scenes/Hazards/ghost_two.tscn" id="12_fql6c"]
 [ext_resource type="PackedScene" uid="uid://ds467bobh2qt" path="res://Scenes/chair_1ul.tscn" id="14_mq80v"]
 [ext_resource type="PackedScene" uid="uid://dmdd2hys3p6nw" path="res://Scenes/chair_1dr.tscn" id="15_uteiq"]
-[ext_resource type="PackedScene" path="res://Scenes/gladys.tscn" id="16_aux57"]
-[ext_resource type="PackedScene" path="res://Scenes/elevator_button.tscn" id="17_tw2u6"]
-[ext_resource type="PackedScene" path="res://Scenes/document_item.tscn" id="18_kl7hh"]
+[ext_resource type="PackedScene" uid="uid://bk7w6c1ncf7x6" path="res://Scenes/gladys.tscn" id="16_aux57"]
+[ext_resource type="PackedScene" uid="uid://diyrj48gja4ca" path="res://Scenes/elevator_button.tscn" id="17_tw2u6"]
+[ext_resource type="PackedScene" uid="uid://cwx2ubufmkjdp" path="res://Scenes/document_item.tscn" id="18_kl7hh"]
 [ext_resource type="PackedScene" uid="uid://dunhudykqn40i" path="res://Scenes/cactus_1.tscn" id="20_uun8i"]
 [ext_resource type="Script" path="res://Scenes/elevator_trigger.gd" id="21_s58cr"]
 

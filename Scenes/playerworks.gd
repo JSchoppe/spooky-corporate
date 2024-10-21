@@ -43,21 +43,28 @@ func _process(delta):
 		$Pocket.visible = true
 		if Gvars.iWedge>0:
 			$iWedge.visible = true
+			$iWedgeNumber.visible = true
+			$iWedgeNumber.text = str(Gvars.iWedge)
 		if Gvars.iSharonKey>0:
 			$iSharonKey.visible = true
 		if Gvars.iCorn>0:
 			$iCorn.visible = true
+			$iCornNumber.visible = true
+			$iCornNumber.text = str(Gvars.iCorn)
 		if Gvars.iDocument>0:
 			$iDocument.visible = true
-	if (Gvars.time - Gvars.phonetime > 300):
+	if (Gvars.time - Gvars.phonetime > 180):
 		$Phone.visible = false
 		$PhoneVideo1.visible = false
 		#Gvars.phonetime = Gvars.time
-	if (Gvars.time - Gvars.inventorytime > 200):
+	if (Gvars.time - Gvars.inventorytime > 120):
 		$Pocket.visible = false
 		$iWedge.visible = false
 		$iSharonKey.visible = false
 		$iCorn.visible = false
+		$iDocument.visible = false
+		$iCornNumber.visible = false
+		$iWedgeNumber.visible = false
 		#Gvars.phonetime = Gvars.time
 func _physics_process(delta: float) -> void:
 	current_step_audio_cooldown -= delta

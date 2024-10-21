@@ -123,21 +123,29 @@ func _unpause():
 
 # Called when an area is entered by the player shape.
 func _on_area_entered(area: Area2D) -> void:
+	if area is iCorn and area.is_visible():
+		$Pickup.play()
+		area.hide()
+		Gvars.iCorn = Gvars.iCorn + 1
+		#candy_hit.emit()
 	if area is HauntedProp:
 		_start_death_sequence()
 	if area is CopyMonsterHurtZone:
 		_start_death_sequence()
 	if area is WedgeItem:
+		$Pickup.play()
 		Gvars.iWedge =  Gvars.iWedge + 1
 		area.position.x = 1000000
 		Gvars.CurrentMessage = "This door stop might come in handy."
 		Gvars.MessageTime = Gvars.time
 	if area is DocumentItem:
+		$Pickup.play()
 		Gvars.iDocument = Gvars.iDocument + 1
 		area.position.x = 1000000
 		Gvars.CurrentMessage = "This is the memo about turning off the elevator at night"
 		Gvars.MessageTime = Gvars.time
 	if area is SharonKeyItem:
+		$Pickup.play()
 		Gvars.iSharonKey = Gvars.iSharonKey+1
 		area.position.x = 1000000
 		Gvars.CurrentMessage = "I've always wondered what was in Sharon's office."
@@ -163,8 +171,10 @@ func _on_area_entered(area: Area2D) -> void:
 			Gvars.MessageTime = Gvars.time
 	if area is ElevatorTrigger:
 		if Gvars.ElevatorOn:
-			Gvars.CurrentMessage = "I WIN!"
-			Gvars.MessageTime = Gvars.time
+			$EndScreen.visible = true
+			position.x = 2000000
+			#Gvars.CurrentMessage = "I WIN!"
+			#Gvars.MessageTime = Gvars.time
 		else:
 			Gvars.CurrentMessage = "The elevators are turned off for the night"
 			Gvars.MessageTime = Gvars.time
@@ -172,11 +182,11 @@ func _start_death_sequence():
 	
 	# disable collision's while the player is dead
 	$CollisionShape2D.set_deferred("disabled", true)
-	
-	$AnimatedSprite2D.animation = "dying"
-	dying = true
-	deadtime = Gvars.time
-	$Deathsound.play()
+	if not dying:
+		$AnimatedSprite2D.animation = "dying"
+		dying = true
+		deadtime = Gvars.time
+		$Deathsound.play()
 	# For now just hide the player.
 	#hide()
 

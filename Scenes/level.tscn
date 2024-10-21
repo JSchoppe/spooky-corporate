@@ -543,7 +543,7 @@ metadata/_edit_lock_ = true
 position = Vector2(3447, -438)
 
 [node name="DocumentItem" parent="." instance=ExtResource("18_kl7hh")]
-position = Vector2(5194, -208)
+position = Vector2(5306, -574)
 
 [node name="Cactus1" parent="." instance=ExtResource("20_uun8i")]
 position = Vector2(1050, 1374)

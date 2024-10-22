@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://vrdntxt78k3k"]
-
-[ext_resource type="Script" path="res://Scripts/haunted_prop.gd" id="1_d4o0d"]
-
-[node name="HauntedProp" type="Area2D"]
-script = ExtResource("1_d4o0d")

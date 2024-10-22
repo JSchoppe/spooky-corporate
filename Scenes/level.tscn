@@ -1,11 +1,12 @@
-[gd_scene load_steps=72 format=3 uid="uid://jlehwaifg3n3"]
+[gd_scene load_steps=73 format=3 uid="uid://jlehwaifg3n3"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_jk4ih"]
 [ext_resource type="Texture2D" uid="uid://buss7malm43ok" path="res://Art/floor_1_background.png" id="1_lqlnj"]
 [ext_resource type="Texture2D" uid="uid://ccr5qs467ed8i" path="res://Art/floor_1_foreground.png" id="2_ir5kf"]
-[ext_resource type="Texture2D" uid="uid://c4fuveentejnn" path="res://Art/conferenceroombackground.png" id="3_6742c"]
+[ext_resource type="Texture2D" uid="uid://u8gb7s7uvxdm" path="res://Art/conferenceroombackground-background.png" id="4_3i12v"]
 [ext_resource type="Texture2D" uid="uid://d00wawl0gv8eh" path="res://Art/accountingbackground.png" id="4_pfoq2"]
 [ext_resource type="Texture2D" uid="uid://bt772856n2mdw" path="res://Art/complaintsbackground.png" id="5_2a4tj"]
+[ext_resource type="Texture2D" uid="uid://crv7lssd3dylv" path="res://Art/conferenceroombackground-foreground.png" id="5_cgt5c"]
 [ext_resource type="Script" path="res://Scenes/conftable.gd" id="5_ledmg"]
 [ext_resource type="Texture2D" uid="uid://dpjrq22thp3bd" path="res://Art/HRBackground.png" id="5_pnahn"]
 [ext_resource type="PackedScene" uid="uid://bmi7ms2d81msx" path="res://Scenes/Doors/door.tscn" id="7_xaijk"]
@@ -23,9 +24,9 @@
 [ext_resource type="PackedScene" uid="uid://dunhudykqn40i" path="res://Scenes/cactus_1.tscn" id="20_uun8i"]
 [ext_resource type="Script" path="res://Scenes/elevator_trigger.gd" id="21_s58cr"]
 [ext_resource type="PackedScene" uid="uid://drnywv2arvv80" path="res://Scenes/complaints_rug.tscn" id="22_286p1"]
-[ext_resource type="PackedScene" uid="uid://gdkwx4moxhvm" path="res://Scenes/mundane_document.tscn" id="23_dtcv7"]
-[ext_resource type="PackedScene" uid="uid://bf0px8viwglvk" path="res://Scenes/mundane_document2.tscn" id="24_i5hi2"]
-[ext_resource type="PackedScene" uid="uid://eow3pdusq4wn" path="res://Scenes/complaints_sign.tscn" id="26_ka1hb"]
+[ext_resource type="PackedScene" path="res://Scenes/mundane_document.tscn" id="23_dtcv7"]
+[ext_resource type="PackedScene" path="res://Scenes/mundane_document2.tscn" id="24_i5hi2"]
+[ext_resource type="PackedScene" path="res://Scenes/complaints_sign.tscn" id="26_ka1hb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6y7wf"]
 size = Vector2(2600, 200)
@@ -231,10 +232,17 @@ shape = SubResource("RectangleShape2D_pj8t5")
 position = Vector2(50, 984)
 shape = SubResource("RectangleShape2D_2duwj")
 
-[node name="ConferenceBackground" type="Sprite2D" parent="."]
+[node name="conference_room" type="Node" parent="."]
+
+[node name="background" type="Sprite2D" parent="conference_room"]
 position = Vector2(1993, 1795)
-texture = ExtResource("3_6742c")
+texture = ExtResource("4_3i12v")
 metadata/_edit_lock_ = true
+
+[node name="foreground" type="Sprite2D" parent="conference_room"]
+z_index = 2
+position = Vector2(1993, 1795)
+texture = ExtResource("5_cgt5c")
 
 [node name="conftable" type="StaticBody2D" parent="."]
 position = Vector2(1945, 743)

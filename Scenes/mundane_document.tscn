@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://gdkwx4moxhvm"]
+
+[ext_resource type="Script" path="res://Scenes/mundane_document.gd" id="1_yngue"]
+[ext_resource type="Texture2D" uid="uid://b2g3jgrg33wur" path="res://Art/Document.png" id="2_8oe68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hp8d"]
+size = Vector2(122, 188)
+
+[node name="MundaneDocument" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_yngue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_0hp8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8oe68")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

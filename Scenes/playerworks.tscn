@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://dxfrg6fec7kjd" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-002.ogg" id="3_bpv43"]
 [ext_resource type="Texture2D" uid="uid://ke2qhwmrud2t" path="res://Art/speechbubble1.png" id="3_hghet"]
 [ext_resource type="Texture2D" uid="uid://dd4d8h5x2sv73" path="res://Art/character.png" id="3_nlbw0"]
-[ext_resource type="Texture2D" uid="uid://bvbujdya6mqqn" path="res://Art/phone_background.png" id="4_0piav"]
+[ext_resource type="Texture2D" uid="uid://crjweobw4qja5" path="res://Art/phone_background.png" id="4_0piav"]
 [ext_resource type="AudioStream" uid="uid://p6mfdqpvga74" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-003.ogg" id="4_m04kb"]
 [ext_resource type="AudioStream" uid="uid://b36scmmjexkrp" path="res://Audio/SFX/you_died.ogg" id="5_2japx"]
 [ext_resource type="AudioStream" uid="uid://be0cxe38t7j6h" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-004.ogg" id="5_u1bhp"]
@@ -19,13 +19,13 @@
 [ext_resource type="AudioStream" uid="uid://c8tksm8ydvtos" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-008.ogg" id="9_cbdo6"]
 [ext_resource type="AudioStream" uid="uid://bf4nuuf6or4mf" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-009.ogg" id="10_jfrg0"]
 [ext_resource type="AudioStream" uid="uid://cb8ii8qqb8k7n" path="res://Audio/SFX/Footsteps/Carpet/Footsteps_Carpet-010.ogg" id="11_xv30d"]
-[ext_resource type="Texture2D" uid="uid://c7l820xtnmptk" path="res://Art/Document.png" id="20_0m5ys"]
-[ext_resource type="Texture2D" uid="uid://ypdtwek8i1b2" path="res://Art/Document2.png" id="21_o602q"]
+[ext_resource type="Texture2D" uid="uid://b2g3jgrg33wur" path="res://Art/Document.png" id="20_0m5ys"]
+[ext_resource type="Texture2D" uid="uid://daiugvk04tjhq" path="res://Art/Document2.png" id="21_o602q"]
 [ext_resource type="AudioStream" uid="uid://2s116gmtdm7q" path="res://Audio/SFX/Lightning.ogg" id="22_fq8vt"]
 [ext_resource type="AudioStream" uid="uid://dtinvd7i3y1xr" path="res://Audio/SFX/success.ogg" id="23_hj2a1"]
-[ext_resource type="AudioStream" uid="uid://bjdayyeofr3b1" path="res://Audio/SFX/ItemAcquire_BadgeAndDoorstops_.ogg" id="23_jqpfd"]
-[ext_resource type="Texture2D" uid="uid://cd2ld7yvdcq66" path="res://Art/EndScreen.png" id="24_wms1g"]
-[ext_resource type="AudioStream" uid="uid://j0sufpwt6h2h" path="res://Audio/SFX/CandyCornMunch.ogg" id="26_tolw7"]
+[ext_resource type="AudioStream" uid="uid://cmyowt2tshbv8" path="res://Audio/SFX/ItemAcquire_BadgeAndDoorstops_.ogg" id="23_jqpfd"]
+[ext_resource type="Texture2D" uid="uid://ckdx7stkfyn5n" path="res://Art/EndScreen.png" id="24_wms1g"]
+[ext_resource type="AudioStream" uid="uid://bl3jx5sn1rvnr" path="res://Audio/SFX/CandyCornMunch.ogg" id="26_tolw7"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_uj7vh"]
 playback_mode = 1
@@ -564,17 +564,15 @@ frame_progress = 0.465318
 metadata/_edit_lock_ = true
 
 [node name="SpeechBubble" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(192.75, -131.75)
-scale = Vector2(0.714452, 0.691038)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_hghet")
 metadata/_edit_lock_ = true
 
 [node name="PlayerThoughts" type="Label" parent="."]
-visible = false
-offset_left = 89.0
-offset_top = -184.0
-offset_right = 292.0
+offset_left = 78.0
+offset_top = -187.0
+offset_right = 297.0
 offset_bottom = -107.0
 text = "default text"
 label_settings = SubResource("LabelSettings_8h1r7")

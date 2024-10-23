@@ -1,8 +1,9 @@
-[gd_scene load_steps=73 format=3 uid="uid://jlehwaifg3n3"]
+[gd_scene load_steps=74 format=3 uid="uid://jlehwaifg3n3"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_jk4ih"]
 [ext_resource type="Texture2D" uid="uid://buss7malm43ok" path="res://Art/floor_1_background.png" id="1_lqlnj"]
 [ext_resource type="Texture2D" uid="uid://ccr5qs467ed8i" path="res://Art/floor_1_foreground.png" id="2_ir5kf"]
+[ext_resource type="PackedScene" uid="uid://y34vvrvir45j" path="res://Scenes/Levels/LevelProps/GhostBackground.tscn" id="2_mawty"]
 [ext_resource type="Texture2D" uid="uid://u8gb7s7uvxdm" path="res://Art/conferenceroombackground-background.png" id="4_3i12v"]
 [ext_resource type="Texture2D" uid="uid://d00wawl0gv8eh" path="res://Art/accountingbackground.png" id="4_pfoq2"]
 [ext_resource type="Texture2D" uid="uid://bt772856n2mdw" path="res://Art/complaintsbackground.png" id="5_2a4tj"]
@@ -166,6 +167,27 @@ size = Vector2(1195, 122)
 [node name="Level" type="Node"]
 script = ExtResource("1_jk4ih")
 
+[node name="GhostBackground4" parent="." instance=ExtResource("2_mawty")]
+position = Vector2(1770, 1547)
+
+[node name="GhostBackground2" parent="." instance=ExtResource("2_mawty")]
+position = Vector2(1853, 3121)
+
+[node name="GhostBackground" parent="." instance=ExtResource("2_mawty")]
+position = Vector2(1929, 54)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 2400.0
+offset_top = -1191.0
+offset_right = 5200.0
+offset_bottom = 4451.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1156.0
+offset_top = -1187.0
+offset_right = 1644.0
+offset_bottom = 4455.0
+
 [node name="background_image" type="Sprite2D" parent="."]
 texture = ExtResource("1_lqlnj")
 metadata/_edit_lock_ = true
@@ -176,7 +198,6 @@ texture = ExtResource("2_ir5kf")
 metadata/_edit_lock_ = true
 
 [node name="Breakwalls" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2(-898, -1098)
 metadata/_edit_lock_ = true
 
@@ -251,7 +272,7 @@ script = ExtResource("5_ledmg")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="conftable"]
-position = Vector2(-7, 855)
+position = Vector2(1, 851)
 shape = SubResource("CapsuleShape2D_bh6lp")
 
 [node name="confwalls" type="StaticBody2D" parent="."]
@@ -583,11 +604,11 @@ shape = SubResource("RectangleShape2D_5q1gl")
 position = Vector2(1370, 3613)
 
 [node name="MundaneDocument" parent="." instance=ExtResource("23_dtcv7")]
-position = Vector2(2035, -320)
+position = Vector2(2311, -619)
 rotation = 1.26885
 
 [node name="MundaneDocument2" parent="." instance=ExtResource("24_i5hi2")]
-position = Vector2(1839, 178)
+position = Vector2(2377, 299)
 rotation = -1.26885
 
 [node name="ComplaintsSign" parent="." instance=ExtResource("26_ka1hb")]

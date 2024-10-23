@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://y34vvrvir45j"]
+
+[ext_resource type="Texture2D" uid="uid://dlapk1duwl7ny" path="res://Art/ghost_inferno_background.png" id="1_2bqm5"]
+[ext_resource type="Script" path="res://Scenes/Levels/LevelProps/ghost_background.gd" id="1_13hww"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e4a0"]
+atlas = ExtResource("1_2bqm5")
+region = Rect2(0, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fog7"]
+atlas = ExtResource("1_2bqm5")
+region = Rect2(1000, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgju7"]
+atlas = ExtResource("1_2bqm5")
+region = Rect2(0, 800, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nov48"]
+atlas = ExtResource("1_2bqm5")
+region = Rect2(1000, 800, 1000, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_py8d7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e4a0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fog7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgju7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nov48")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GhostBackground" type="Node2D"]
+script = ExtResource("1_13hww")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-34, 7)
+scale = Vector2(1.66443, 2.02433)
+sprite_frames = SubResource("SpriteFrames_py8d7")
+frame_progress = 0.389065
+speed_scale = 0.54

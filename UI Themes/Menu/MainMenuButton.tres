@@ -1,4 +1,7 @@
-[gd_resource type="Theme" format=3 uid="uid://dl3v5hf6lki77"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dl3v5hf6lki77"]
+
+[ext_resource type="FontFile" uid="uid://exmbuwcf5t51" path="res://Fonts/Mountains_of_Christmas/MountainsofChristmas-Regular.ttf" id="1_o8dth"]
 
 [resource]
-default_font_size = 30
+default_font = ExtResource("1_o8dth")
+default_font_size = 41

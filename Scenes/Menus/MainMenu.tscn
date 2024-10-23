@@ -1,13 +1,52 @@
-[gd_scene load_steps=7 format=3 uid="uid://kmjj85cyhk4v"]
+[gd_scene load_steps=14 format=3 uid="uid://kmjj85cyhk4v"]
 
+[ext_resource type="Script" path="res://Scenes/Menus/main_menu.gd" id="1_aljav"]
 [ext_resource type="AudioStream" uid="uid://bu5d1gsovax4l" path="res://Audio/BGM/main_menu.ogg" id="1_l5km4"]
 [ext_resource type="Script" path="res://Scripts/menu_ui.gd" id="2_f0lrt"]
 [ext_resource type="Theme" uid="uid://dl3v5hf6lki77" path="res://UI Themes/Menu/MainMenuButton.tres" id="2_h2okw"]
 [ext_resource type="Theme" uid="uid://cu0pw7n870jsv" path="res://UI Themes/Menu/Title.tres" id="3_i3ce2"]
 [ext_resource type="Theme" uid="uid://dku7m3f7x5tsc" path="res://UI Themes/Menu/CreditsHeader.tres" id="3_ufib3"]
 [ext_resource type="Theme" uid="uid://dp8m2du2vmyg6" path="res://UI Themes/Menu/CreditsBody.tres" id="4_glyhc"]
+[ext_resource type="Texture2D" uid="uid://dlapk1duwl7ny" path="res://Art/ghost_inferno_background.png" id="7_1now0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8gen"]
+atlas = ExtResource("7_1now0")
+region = Rect2(0, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y506o"]
+atlas = ExtResource("7_1now0")
+region = Rect2(1000, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tyqc"]
+atlas = ExtResource("7_1now0")
+region = Rect2(0, 800, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boruc"]
+atlas = ExtResource("7_1now0")
+region = Rect2(1000, 800, 1000, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b1uy4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8gen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y506o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tyqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boruc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main Menu" type="Node2D"]
+script = ExtResource("1_aljav")
 
 [node name="Background Audio Loop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_l5km4")
@@ -139,6 +178,13 @@ horizontal_alignment = 1
 layout_mode = 2
 theme = ExtResource("2_h2okw")
 text = "Back"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1944.91, 1647.94)
+scale = Vector2(3.89419, 4.12016)
+sprite_frames = SubResource("SpriteFrames_b1uy4")
+frame_progress = 0.482031
+speed_scale = 0.2
 
 [connection signal="pressed" from="Menu UI/Main Buttons/Start Button" to="Menu UI" method="_on_start_button_pressed"]
 [connection signal="pressed" from="Menu UI/Main Buttons/Credits Button" to="Menu UI" method="_on_credits_button_pressed"]

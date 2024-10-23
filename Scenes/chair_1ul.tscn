@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds467bobh2qt"]
 
-[ext_resource type="Texture2D" uid="uid://cho6ybb6hud8w" path="res://Art/Chair1UL.png" id="1_plext"]
+[ext_resource type="Texture2D" uid="uid://vvspjdxr0kyc" path="res://Art/chair2.png" id="1_4an2e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b608i"]
 radius = 60.0
@@ -11,4 +11,7 @@ radius = 60.0
 shape = SubResource("CircleShape2D_b608i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_plext")
+position = Vector2(15, -13)
+rotation = 0.261799
+scale = Vector2(0.256757, 0.21686)
+texture = ExtResource("1_4an2e")

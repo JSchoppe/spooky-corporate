@@ -1,15 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://dunhudykqn40i"]
+[gd_scene load_steps=7 format=3 uid="uid://dunhudykqn40i"]
 
-[ext_resource type="Texture2D" uid="uid://d1ytr1olxn07j" path="res://Art/Cactus1.png" id="1_o1ha7"]
+[ext_resource type="Script" path="res://Scenes/cactus_1.gd" id="1_oo8i4"]
+[ext_resource type="Texture2D" uid="uid://bkl1twjfgy1y6" path="res://Art/pumkin_plant.png" id="2_bgjee"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyi6q"]
+atlas = ExtResource("2_bgjee")
+region = Rect2(0, 0, 1080, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb2nn"]
+atlas = ExtResource("2_bgjee")
+region = Rect2(1080, 0, 1080, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5eoa2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyi6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb2nn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8age7"]
 radius = 59.6657
 
 [node name="Cactus1" type="StaticBody2D"]
+script = ExtResource("1_oo8i4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -30)
+scale = Vector2(0.214005, 0.187326)
+sprite_frames = SubResource("SpriteFrames_5eoa2")
+frame_progress = 0.185496
+speed_scale = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8age7")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -66)
-texture = ExtResource("1_o1ha7")

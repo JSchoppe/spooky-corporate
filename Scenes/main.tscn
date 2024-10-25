@@ -55,7 +55,7 @@ sprite_frames = SubResource("SpriteFrames_08qhs")
 metadata/_edit_lock_ = true
 
 [node name="playerworks" parent="." node_paths=PackedStringArray("pause_menu") instance=ExtResource("7_74bnn")]
-position = Vector2(3983, 2994)
+position = Vector2(3956, 1353)
 pause_menu = NodePath("../Pause Menu")
 
 [node name="Camera2D" type="Camera2D" parent="playerworks"]

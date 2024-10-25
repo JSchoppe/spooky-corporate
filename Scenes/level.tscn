@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://jlehwaifg3n3"]
+[gd_scene load_steps=70 format=3 uid="uid://jlehwaifg3n3"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_jk4ih"]
 [ext_resource type="Texture2D" uid="uid://buss7malm43ok" path="res://Art/floor_1_background.png" id="1_lqlnj"]
@@ -23,10 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://cwx2ubufmkjdp" path="res://Scenes/document_item.tscn" id="18_kl7hh"]
 [ext_resource type="PackedScene" uid="uid://dunhudykqn40i" path="res://Scenes/cactus_1.tscn" id="20_uun8i"]
 [ext_resource type="Script" path="res://Scenes/elevator_trigger.gd" id="21_s58cr"]
-[ext_resource type="PackedScene" uid="uid://drnywv2arvv80" path="res://Scenes/complaints_rug.tscn" id="22_286p1"]
 [ext_resource type="PackedScene" path="res://Scenes/mundane_document.tscn" id="23_dtcv7"]
 [ext_resource type="PackedScene" path="res://Scenes/mundane_document2.tscn" id="24_i5hi2"]
-[ext_resource type="PackedScene" path="res://Scenes/complaints_sign.tscn" id="26_ka1hb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6y7wf"]
 size = Vector2(2600, 200)
@@ -81,19 +79,17 @@ size = Vector2(196, 3291)
 size = Vector2(152, 611)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1dye"]
-size = Vector2(150.625, 783.25)
+size = Vector2(150.625, 3462.63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8pq5"]
-size = Vector2(1359, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkbsg"]
-size = Vector2(140.5, 2354)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2r4t"]
-size = Vector2(190, 647)
+size = Vector2(1359, 69)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3x2y"]
-size = Vector2(214.75, 394.5)
+size = Vector2(214.75, 563)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vnb0b"]
+a = Vector2(787.61, -808.393)
+b = Vector2(594.331, -1050.62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f085o"]
 size = Vector2(1426, 198)
@@ -176,7 +172,7 @@ offset_bottom = 4451.0
 offset_left = -1156.0
 offset_top = -1187.0
 offset_right = 1644.0
-offset_bottom = 4455.0
+offset_bottom = 1001.0
 
 [node name="background_image" type="Sprite2D" parent="."]
 texture = ExtResource("1_lqlnj")
@@ -282,24 +278,21 @@ position = Vector2(855, 420.5)
 shape = SubResource("RectangleShape2D_85d4p")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="confwalls"]
-position = Vector2(-491, 2507)
+position = Vector2(-491, 3846.69)
 shape = SubResource("RectangleShape2D_w1dye")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="confwalls"]
-position = Vector2(274.5, 5502)
+position = Vector2(274.5, 5567.5)
 shape = SubResource("RectangleShape2D_e8pq5")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="confwalls"]
-position = Vector2(-493.25, 3368)
-shape = SubResource("RectangleShape2D_pkbsg")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="confwalls"]
-position = Vector2(-503, 5200.5)
-shape = SubResource("RectangleShape2D_g2r4t")
-
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="confwalls"]
-position = Vector2(878.625, 5197.25)
+position = Vector2(878.625, 5281.5)
 shape = SubResource("RectangleShape2D_t3x2y")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="confwalls"]
+position = Vector2(-1281, 6152)
+rotation = 0.261799
+shape = SubResource("SegmentShape2D_vnb0b")
 
 [node name="AccountingBackground" type="Sprite2D" parent="."]
 position = Vector2(4163, 293)
@@ -354,10 +347,12 @@ position = Vector2(2867, 526)
 shape = SubResource("RectangleShape2D_op7a0")
 
 [node name="ComplaintsBackground" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(61, 2764)
 texture = ExtResource("5_2a4tj")
 
 [node name="ComplaintsWalls" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComplaintsWalls"]
 position = Vector2(-1226.88, 2795.63)
@@ -515,12 +510,6 @@ position = Vector2(1575, 2193)
 [node name="GhostTwo3" parent="." instance=ExtResource("12_fql6c")]
 position = Vector2(4338, 1385)
 
-[node name="GhostTwo4" parent="." instance=ExtResource("12_fql6c")]
-position = Vector2(-107, 3594)
-
-[node name="GhostTwo5" parent="." instance=ExtResource("12_fql6c")]
-position = Vector2(926, 2678)
-
 [node name="Chair1UL" parent="." instance=ExtResource("14_mq80v")]
 position = Vector2(1636, -438)
 
@@ -571,12 +560,6 @@ position = Vector2(3447, -438)
 [node name="DocumentItem" parent="." instance=ExtResource("18_kl7hh")]
 position = Vector2(5306, -574)
 
-[node name="Cactus1" parent="." instance=ExtResource("20_uun8i")]
-position = Vector2(1050, 1374)
-
-[node name="Cactus2" parent="." instance=ExtResource("20_uun8i")]
-position = Vector2(1068, 4239)
-
 [node name="Cactus3" parent="." instance=ExtResource("20_uun8i")]
 position = Vector2(1427, 4203)
 
@@ -590,9 +573,6 @@ script = ExtResource("21_s58cr")
 position = Vector2(3407.5, -317)
 shape = SubResource("RectangleShape2D_5q1gl")
 
-[node name="ComplaintsRug" parent="." instance=ExtResource("22_286p1")]
-position = Vector2(1370, 3613)
-
 [node name="MundaneDocument" parent="." instance=ExtResource("23_dtcv7")]
 position = Vector2(2311, -619)
 rotation = 1.26885
@@ -600,8 +580,5 @@ rotation = 1.26885
 [node name="MundaneDocument2" parent="." instance=ExtResource("24_i5hi2")]
 position = Vector2(2377, 299)
 rotation = -1.26885
-
-[node name="ComplaintsSign" parent="." instance=ExtResource("26_ka1hb")]
-position = Vector2(0, 2796)
 
 [connection signal="input_event" from="conftable" to="conftable" method="_on_input_event"]

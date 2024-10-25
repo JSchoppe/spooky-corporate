@@ -9,8 +9,8 @@ radius = 60.0
 input_pickable = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.625, -17.875)
-rotation = -1.5708
+position = Vector2(-5.96046e-08, 0)
+rotation = -1.309
 scale = Vector2(0.287323, 0.278314)
 texture = ExtResource("1_n3hr8")
 

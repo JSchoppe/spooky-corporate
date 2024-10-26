@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://jlehwaifg3n3"]
+[gd_scene load_steps=80 format=3 uid="uid://jlehwaifg3n3"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_jk4ih"]
 [ext_resource type="Texture2D" uid="uid://buss7malm43ok" path="res://Art/floor_1_background.png" id="1_lqlnj"]
@@ -65,9 +65,49 @@ size = Vector2(376, 195)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2duwj"]
 size = Vector2(200, 200)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bh6lp"]
-radius = 220.0
-height = 4760.0
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2be0k"]
+a = Vector2(-184, 762)
+b = Vector2(-237, -1018)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5etag"]
+a = Vector2(-316, -1499)
+b = Vector2(-236, -1015)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kmtom"]
+a = Vector2(-316, -1498)
+b = Vector2(206, -1497)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qirhx"]
+a = Vector2(208, -1497)
+b = Vector2(245, 647)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fdo40"]
+a = Vector2(193, 1452)
+b = Vector2(246, 648)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y4g6n"]
+a = Vector2(189, 1454)
+b = Vector2(256, 2595)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3jg3t"]
+a = Vector2(-250, 1554)
+b = Vector2(-183, 758)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4h2sk"]
+a = Vector2(-251, 1553)
+b = Vector2(-214, 2560)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hpvw4"]
+a = Vector2(-342, 3252)
+b = Vector2(-213, 2558)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pvlud"]
+a = Vector2(257, 3235)
+b = Vector2(253, 2599)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wa8rt"]
+a = Vector2(257, 3235)
+b = Vector2(-344, 3251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvoaq"]
 size = Vector2(1299, 205)
@@ -258,10 +298,40 @@ script = ExtResource("5_ledmg")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="conftable"]
-position = Vector2(1, 851)
-shape = SubResource("CapsuleShape2D_bh6lp")
+shape = SubResource("SegmentShape2D_2be0k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_5etag")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_kmtom")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_qirhx")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_fdo40")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_y4g6n")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_3jg3t")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_4h2sk")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_hpvw4")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_pvlud")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="conftable"]
+shape = SubResource("SegmentShape2D_wa8rt")
 
 [node name="confwalls" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(1722, -1104)
 metadata/_edit_lock_ = true
 

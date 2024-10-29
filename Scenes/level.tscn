@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://jlehwaifg3n3"]
+[gd_scene load_steps=81 format=3 uid="uid://jlehwaifg3n3"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_jk4ih"]
 [ext_resource type="Texture2D" uid="uid://buss7malm43ok" path="res://Art/floor_1_background.png" id="1_lqlnj"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://Scenes/elevator_trigger.gd" id="21_s58cr"]
 [ext_resource type="PackedScene" path="res://Scenes/mundane_document.tscn" id="23_dtcv7"]
 [ext_resource type="PackedScene" path="res://Scenes/mundane_document2.tscn" id="24_i5hi2"]
+[ext_resource type="PackedScene" uid="uid://ng4gwbccek0l" path="res://Scenes/Doors/door_4.tscn" id="26_ujstm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6y7wf"]
 size = Vector2(2600, 200)
@@ -650,5 +651,23 @@ rotation = 1.26885
 [node name="MundaneDocument2" parent="." instance=ExtResource("24_i5hi2")]
 position = Vector2(2377, 299)
 rotation = -1.26885
+
+[node name="Door5" parent="." instance=ExtResource("26_ujstm")]
+position = Vector2(2449, 3710)
+
+[node name="Door Opened Audio Player" type="AudioStreamPlayer2D" parent="Door5"]
+stream = ExtResource("9_txfj1")
+
+[node name="Door6" parent="." instance=ExtResource("26_ujstm")]
+position = Vector2(2449, -89)
+
+[node name="Door Opened Audio Player" type="AudioStreamPlayer2D" parent="Door6"]
+stream = ExtResource("9_txfj1")
+
+[node name="Door7" parent="." instance=ExtResource("26_ujstm")]
+position = Vector2(1112, 138)
+
+[node name="Door Opened Audio Player" type="AudioStreamPlayer2D" parent="Door7"]
+stream = ExtResource("9_txfj1")
 
 [connection signal="input_event" from="conftable" to="conftable" method="_on_input_event"]

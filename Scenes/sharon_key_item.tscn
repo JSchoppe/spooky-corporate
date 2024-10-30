@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbtitbud8yvhh"]
 
-[ext_resource type="Texture2D" uid="uid://qb6amg74naor" path="res://Art/SharonKey.png" id="1_g6e2p"]
 [ext_resource type="Script" path="res://Scenes/sharon_key_item.gd" id="1_x5go2"]
+[ext_resource type="Texture2D" uid="uid://eb4243s76r4y" path="res://Art/sharon_key.png" id="2_b4hxe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl1ii"]
 size = Vector2(128, 128)
@@ -10,8 +10,10 @@ size = Vector2(128, 128)
 script = ExtResource("1_x5go2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3.84, 3.88)
 shape = SubResource("RectangleShape2D_tl1ii")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.51465, 36.8388)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_g6e2p")
+texture = ExtResource("2_b4hxe")

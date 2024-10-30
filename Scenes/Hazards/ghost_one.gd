@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D):
-	show() # Reveal the ghost after a player collision
+	#show() # Reveal the ghost after a player collision
 	$AnimatedSprite2D.play("scare")
 	hit.emit()
 

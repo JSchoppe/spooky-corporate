@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c1h26g3735x1n" path="res://Art/ghost.png" id="1_ijas7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yi66l"]
-size = Vector2(1063, 781)
+size = Vector2(1278.49, 1317.45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ratay"]
 atlas = ExtResource("1_ijas7")
@@ -52,12 +52,13 @@ scale = Vector2(0.2, 0.2)
 script = ExtResource("1_bdpda")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(38.5, 194.5)
+position = Vector2(24.9885, 630)
+scale = Vector2(0.789977, -0.288435)
 shape = SubResource("RectangleShape2D_yi66l")
 debug_color = Color(1, 0, 0, 0.419608)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_llah4")
-animation = &"scare"
+animation = &"dead"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

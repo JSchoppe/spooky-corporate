@@ -42,7 +42,7 @@ stream_8/stream = ExtResource("10_jfrg0")
 stream_9/stream = ExtResource("11_xv30d")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fhjg"]
-size = Vector2(121, 176.5)
+size = Vector2(98, 53.7105)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yhami"]
 atlas = ExtResource("3_nlbw0")
@@ -545,7 +545,7 @@ position = Vector2(0, -40)
 stream = SubResource("AudioStreamRandomizer_uj7vh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 13.5)
+position = Vector2(3, 72)
 shape = SubResource("RectangleShape2D_1fhjg")
 metadata/_edit_lock_ = true
 
@@ -553,14 +553,14 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area"]
-position = Vector2(0, 13.25)
+position = Vector2(5, 78.1152)
+scale = Vector2(1.26402, 1.40939)
 shape = SubResource("RectangleShape2D_1fhjg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.125, 0.125)
 sprite_frames = SubResource("SpriteFrames_jfq7k")
-animation = &"dead"
-frame_progress = 0.465318
+animation = &"walk"
 metadata/_edit_lock_ = true
 
 [node name="SpeechBubble" type="Sprite2D" parent="."]

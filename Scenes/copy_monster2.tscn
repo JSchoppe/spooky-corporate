@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scenes/copy_monster_hurt_zone.gd" id="4_d3sfg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cu7c"]
-size = Vector2(128, 128)
+size = Vector2(235, 212)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfu2f"]
 atlas = ExtResource("2_rvfyu")
@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmcq3"]
-size = Vector2(384, 384)
+size = Vector2(309, 282)
 
 [node name="CopyMonster2" type="CharacterBody2D"]
 input_pickable = true
@@ -53,6 +53,7 @@ max_distance = 1500.0
 attenuation = 2.2974
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 10)
 shape = SubResource("RectangleShape2D_5cu7c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -64,7 +65,7 @@ script = ExtResource("3_4q3i4")
 script = ExtResource("4_d3sfg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CopyMonsterHurtZone"]
-position = Vector2(-1, -1)
+position = Vector2(-4.5, -3)
 shape = SubResource("RectangleShape2D_qmcq3")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

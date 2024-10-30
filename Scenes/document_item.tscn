@@ -1,32 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwx2ubufmkjdp"]
+[gd_scene load_steps=4 format=3 uid="uid://cwx2ubufmkjdp"]
 
-[ext_resource type="Texture2D" uid="uid://c7l820xtnmptk" path="res://Art/Document.png" id="1_7roxb"]
 [ext_resource type="Script" path="res://Scenes/document_item.gd" id="1_dgems"]
-[ext_resource type="Texture2D" uid="uid://ypdtwek8i1b2" path="res://Art/Document2.png" id="2_6k6oa"]
+[ext_resource type="Texture2D" uid="uid://cafipagd35emw" path="res://Art/mundane_document.png" id="2_thyew"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymyts"]
 size = Vector2(200, 200)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qxg0t"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_7roxb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_6k6oa")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="DocumentItem" type="Area2D"]
 script = ExtResource("1_dgems")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.76, 1.64)
 shape = SubResource("RectangleShape2D_ymyts")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_qxg0t")
-frame_progress = 0.629159
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("2_thyew")

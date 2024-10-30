@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdwkn1gy0sqmc"]
 
-[ext_resource type="Texture2D" uid="uid://b3joxord0c127" path="res://Art/SharonOfficeDoorClosed.png" id="2_203nj"]
+[ext_resource type="Texture2D" uid="uid://bcp8685lcqg86" path="res://Art/sharons_door.png" id="1_22ee2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7woit"]
 size = Vector2(256, 128)
@@ -11,4 +11,4 @@ size = Vector2(256, 128)
 shape = SubResource("RectangleShape2D_7woit")
 
 [node name="ClosedSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_203nj")
+texture = ExtResource("1_22ee2")

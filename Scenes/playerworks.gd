@@ -9,8 +9,8 @@ class_name player
 var screen_size # Size of the game window.
 var dying = false
 var deadtime = 0
-var spawnx = 4000
-var spawny = 1000
+@export var spawnx = 4000
+@export var spawny = 1000
 var current_step_audio_cooldown: float = 0.0
 
 
@@ -77,11 +77,12 @@ func _physics_process(delta: float) -> void:
 			pause_menu.pause()
 		if dying:
 			if (Gvars.time - deadtime > 420):
-				dying = false
-				position.x = spawnx
-				position.y = spawny
-				$AnimatedSprite2D.animation = "idle"
-				$CollisionShape2D.set_deferred("disabled", false)
+				get_tree().reload_current_scene()
+				#dying = false
+				#position.x = spawnx
+				#position.y = spawny
+				#$AnimatedSprite2D.animation = "idle"
+				#$CollisionShape2D.set_deferred("disabled", false)
 				pass#respawn here
 		else:
 			var velocity = Vector2.ZERO # The player's movement vector.
@@ -171,11 +172,11 @@ func _on_area_entered(area: Area2D) -> void:
 		if Gvars.iDocument>0:
 			Gvars.ElevatorOn = true
 			Gvars.iDocument = 0
-			Gvars.CurrentMessage = "Huh, Gladys really does deny everything."
+			Gvars.CurrentMessage = "The elevator's unlocked!"
 			Gvars.MessageTime = Gvars.time
 			$LightningSound.play()
 		else:
-			Gvars.CurrentMessage = "Gosh she denies an awful lot of requests"
+			Gvars.CurrentMessage = "I need to get her Sharon's memo before I can leave."
 			Gvars.MessageTime = Gvars.time
 	if area is ElevatorTrigger:
 		if Gvars.ElevatorOn:
@@ -185,13 +186,14 @@ func _on_area_entered(area: Area2D) -> void:
 			#Gvars.CurrentMessage = "I WIN!"
 			#Gvars.MessageTime = Gvars.time
 		else:
-			Gvars.CurrentMessage = "The elevators are turned off for the night"
+			Gvars.CurrentMessage = "The elevator's locked, it's my way out."
 			Gvars.MessageTime = Gvars.time
 func _start_death_sequence():
 	
 	# disable collision's while the player is dead
-	$CollisionShape2D.set_deferred("disabled", true)
+	#$CollisionShape2D.set_deferred("disabled", true)
 	if not dying:
+		$CollisionShape2D.apply_scale(Vector2(50, 50))
 		$AnimatedSprite2D.animation = "dying"
 		dying = true
 		deadtime = Gvars.time
@@ -202,4 +204,5 @@ func _start_death_sequence():
 
 func _on_animated_sprite_2d_animation_looped():
 	if dying:
+		$CollisionShape2D.set_deferred("disabled", true)
 		$AnimatedSprite2D.animation = "dead"	

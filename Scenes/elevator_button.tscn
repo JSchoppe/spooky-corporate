@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://diyrj48gja4ca"]
 
 [ext_resource type="Script" path="res://Scenes/elevator_button.gd" id="1_7ancy"]
-[ext_resource type="Texture2D" uid="uid://dkcrt7yehv3wy" path="res://Art/ElevatorOff.png" id="1_tv80w"]
-[ext_resource type="Texture2D" uid="uid://bqdgla2h72byb" path="res://Art/ElevatorOn.png" id="2_dfunh"]
+[ext_resource type="Texture2D" uid="uid://bds56d73ceg0i" path="res://Art/ElevatorOff.png" id="1_tv80w"]
+[ext_resource type="Texture2D" uid="uid://b7es08q0cf8d4" path="res://Art/ElevatorOn.png" id="2_dfunh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7qr2"]
 size = Vector2(197, 197)
@@ -15,7 +15,8 @@ position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_d7qr2")
 
 [node name="OnSprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_tv80w")
 
 [node name="OffSprite2D" type="Sprite2D" parent="."]
